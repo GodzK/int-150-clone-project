@@ -562,13 +562,15 @@
 }
 
 .animate-dropdown h1 {
-  font-size: 4em;
+  font-size: 3em;
   margin-left: 12rem;
+  font-weight: bolder;
 }
 
 .dropdown {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
+
   margin-left: 2rem;
   border-bottom: 1px solid #ccc;
 }
@@ -634,14 +636,13 @@ img#previewImage {
   max-width: 100%;
   max-height: 400px;
   border-radius: 12px;
-
 }
 
 .btn-scroll {
   background-color: rgb(219, 219, 219);
   border-radius: 50%;
-  width: 2.5%;
-  height: 10%;
+  width: 3%;
+  height: 30px;
 }
 
 .dropdown-img {
@@ -700,7 +701,7 @@ img#previewImage {
     transform: translateY(0);
     transition: 1s;
   }
- 
+
   .nav-list.active li {
     display: block;
     font-size: 1.5rem;
@@ -804,7 +805,10 @@ img#previewImage {
   .sub-hero h1 {
     font-size: 2rem;
   }
-  .introducing h1, .ipad-list h1, .important h1, .why-best h1 {
+  .introducing h1,
+  .ipad-list h1,
+  .important h1,
+  .why-best h1 {
     font-size: 1.8em;
   }
   .ipad-device {
