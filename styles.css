@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "IBM Plex Sans Thai", "Sukhumvit Set", "SF Pro Text",
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: "Noto Sans Thai", sans-serif;
 }
 
 .nav {
@@ -143,6 +144,15 @@
   background-position: center;
   position: relative;
 }
+.card-content:hover{
+  scale: 1.1;
+  transition: 1s ease;
+  
+}
+.card-content:hover::after{
+  color: #fff;
+  transition: 1s ease;
+}
 
 .card-content::after {
   content: "+";
@@ -152,7 +162,7 @@
   width: 40px;
   height: 40px;
   background-color: #313131;
-  color: #fff;
+  color: #b3b3b3;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -540,9 +550,9 @@
 
 .right {
   flex: 1;
-  padding: 2rem;
+  
   display: flex;
-  width: 100%;
+  width: 50%;
   align-items: center;
   justify-content: center;
   background-color: #f5f4f4;
@@ -591,6 +601,7 @@
 }
 
 .dropdown-content {
+  
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -799,6 +810,7 @@ img#previewImage {
     font-size: 2.5em;
     margin-left: 1rem;
   }
+  
 }
 
 @media (max-width: 480px) {
@@ -820,6 +832,7 @@ img#previewImage {
   .group-property {
     min-height: 650px;
   }
+  
 }
 
 #pencil {

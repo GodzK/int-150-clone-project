@@ -96,7 +96,8 @@
 
   <div class="ipad-list">
     <div class="ipad-content">
-      <h1>ดูข้อมูลผลิตภัณฑ์ตระกูลนี้</h1>
+      <div style="display: flex; width: 100%; justify-content: space-between;"><h1>ดูข้อมูลผลิตภัณฑ์ตระกูลนี้</h1> <a href="" style="width: 30%; margin-top: 30px; color: rgb(57, 86, 248);">เปรียบเทียบทุกรุ่น ></a></div>
+      
       <div class="group-ipad">
         <div class="ipad-device">
           <img src="./assets/ipadpro.png" alt="iPad Pro" />
@@ -177,7 +178,7 @@
           <img src="./assets/ipad-mini.png" alt="iPad Mini" />
           <div class="group-color">
             <div
-              class="color-1"
+              class="color-1"a
               style="background-color: rgb(77, 181, 255)"
             ></div>
             <div
@@ -511,24 +512,23 @@ menuToggle.addEventListener("click", () => {
         const header = drop.querySelector(".dropdown-header");
 
         header.addEventListener("click", () => {
-          // ปิด dropdown อื่น
+          
           dropdowns.forEach((d) => {
             if (d !== drop) {
               d.classList.remove("open");
             }
           });
 
-          // toggle dropdown นี้
+         
           const isOpening = !drop.classList.contains("open");
           drop.classList.toggle("open");
-          // ถ้าเปิด dropdown นี้ → เปลี่ยนภาพแบบค่อยๆ fade
+          
           if (isOpening) {
             const newImg = drop.getAttribute("data-img");
 
-            // เริ่ม fade out
-            image.style.opacity = 0;
 
-            // รอจน fade out เสร็จ แล้วค่อยเปลี่ยน src และ fade in
+            image.style.opacity = 0;
+            
             setTimeout(() => {
               image.src = newImg;
 
@@ -555,14 +555,14 @@ menuToggle.addEventListener("click", () => {
 
         if (rect.top <= windowHeight && rect.bottom >= 0) {
           const scrollFraction = (windowHeight - rect.top) / windowHeight;
-          const scale = 1 - scrollFraction * 0.3;
+          const scale = 1 - scrollFraction * 0.5;
           const borderRadius = scrollFraction * 15;
           video.style.transform = `scale(${scale})`;
           video.style.borderRadius = `${borderRadius}%`;
         }
       });
 
-      // Fade-in animation for sections
+      // Fade-in animation 
       const sections = document.querySelectorAll(".introducing, .ipad-list, .important, .why-best, .animate-dropdown");
       const observer = new IntersectionObserver(
         (entries) => {
