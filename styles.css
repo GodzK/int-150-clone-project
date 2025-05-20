@@ -22,8 +22,8 @@
 }
 
 .nav-list {
-  display: flex;
   gap: 2rem;
+  display: flex;
   flex-grow: 1;
   justify-content: center;
   max-width: 1200px;
@@ -139,7 +139,7 @@
 
 .card-container-wrapper {
   position: relative;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -167,7 +167,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  min-width: 200px;
+  min-width: 260px;
 }
 
 .card-content:hover {
@@ -213,7 +213,12 @@
 .card-content:nth-child(5) {
   background-image: url("./assets/card7.jpg");
 }
-
+.card-content:nth-child(6) {
+  background-image: url("./assets/card1.jpg");
+}
+.card-content:nth-child(7) {
+  background-image: url("./assets/card2.jpg");
+}
 .scroll-buttons {
   display: flex;
   justify-content: flex-end;
@@ -406,6 +411,7 @@
 }
 
 .important {
+  margin-left: 15%;
   margin-top: 15%;
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -479,6 +485,7 @@
 }
 
 .why-best h1 {
+  margin-left: 10%;
   font-size: 3em;
   font-weight: bold;
   margin-bottom: 5rem;
@@ -657,6 +664,18 @@
 .dropdown.open .icon {
   transform: rotate(180deg);
 }
+footer{
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  
+}
+.content-footer{
+  margin-top: 5%;
+width: 40%;
+}
 
 @keyframes flashWhite {
   0% {
@@ -727,6 +746,8 @@ img#previewImage {
 
 @media (max-width: 768px) {
   .nav-list {
+    gap: 0rem;
+    
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
@@ -807,6 +828,9 @@ img#previewImage {
   .best-container {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+  .content-footer{
+    width: 100%;
   }
 }
 
