@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
-
+/* Normalize CSS is included via CDN for consistent rendering across browsers */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans Thai", sans-serif;
+  font-family: "Noto Sans Thai", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* Added fallback fonts */
 }
 
-/* Unchanged styles for nav, list-menu, sub-hero, landing-image, introducing, etc. */
+/* Navigation */
 .nav {
   display: flex;
   font-size: 1rem;
@@ -41,6 +40,7 @@
   opacity: 1;
 }
 
+/* List Menu */
 .list-menu {
   width: 100%;
   display: flex;
@@ -55,6 +55,7 @@
   margin-right: auto;
   overflow-x: auto;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Improves mobile scrolling */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -89,6 +90,7 @@
   white-space: nowrap;
 }
 
+/* Sub Hero */
 .sub-hero {
   margin-top: 2.5%;
   display: flex;
@@ -108,6 +110,7 @@
   font-weight: bold;
 }
 
+/* Landing Image */
 .landing-image {
   width: 100vw;
   display: flex;
@@ -120,6 +123,7 @@
   transition: transform 0.3s ease, border-radius 0.3s ease;
 }
 
+/* Introducing Section */
 .introducing {
   display: flex;
   flex-direction: column;
@@ -138,6 +142,7 @@
   font-size: 3em;
 }
 
+/* Card Container */
 .card-container-wrapper {
   position: relative;
   width: 100%;
@@ -152,6 +157,7 @@
   height: 80vh;
   overflow-x: auto;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Improves mobile scrolling */
   -ms-overflow-style: none;
   scrollbar-width: none;
   flex-wrap: nowrap;
@@ -172,13 +178,13 @@
 }
 
 .card-content:hover {
-  scale: 1.1;
-  transition: 1s ease;
+  transform: scale(1.1); /* Changed to transform for better performance */
+  transition: transform 1s ease;
 }
 
 .card-content:hover::after {
   color: #fff;
-  transition: 1s ease;
+  transition: color 1s ease;
 }
 
 .card-content::after {
@@ -199,28 +205,30 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Use absolute paths for server compatibility */
 .card-content:nth-child(1) {
-  background-image: url("./assets/card1.jpg");
+  background-image: url("/assets/card1.jpg");
 }
 .card-content:nth-child(2) {
-  background-image: url("./assets/card2.jpg");
+  background-image: url("/assets/card2.jpg");
 }
 .card-content:nth-child(3) {
-  background-image: url("./assets/card3.jpg");
+  background-image: url("/assets/card3.jpg");
 }
 .card-content:nth-child(4) {
-  background-image: url("./assets/card4.jpg");
+  background-image: url("/assets/card4.jpg");
 }
 .card-content:nth-child(5) {
-  background-image: url("./assets/card7.jpg");
+  background-image: url("/assets/card7.jpg");
 }
 .card-content:nth-child(6) {
-  background-image: url("./assets/card1.jpg");
+  background-image: url("/assets/card1.jpg");
 }
 .card-content:nth-child(7) {
-  background-image: url("./assets/card2.jpg");
+  background-image: url("/assets/card2.jpg");
 }
 
+/* Scroll Buttons */
 .scroll-buttons {
   display: flex;
   justify-content: flex-end;
@@ -229,13 +237,14 @@
   z-index: 10;
 }
 
+/* iPad List */
 .ipad-list {
   width: 100%;
   background-color: rgb(240, 240, 240);
   opacity: 0;
   transition: opacity 0.5s ease;
   position: relative;
-  min-height: 100vh; /* Ensure section is tall enough for fixed buttons */
+  min-height: 100vh;
 }
 
 .ipad-list.fade-in {
@@ -250,6 +259,7 @@
   width: 100%;
 }
 
+/* iPad Content */
 .ipad-content {
   padding-top: 10%;
   margin-top: 10%;
@@ -270,6 +280,7 @@
   justify-content: flex-start;
   overflow-x: auto;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
   flex-wrap: nowrap;
@@ -363,6 +374,7 @@
   font-size: 0.9rem;
 }
 
+/* Group Property */
 .group-property {
   display: flex;
   text-align: center;
@@ -417,6 +429,7 @@
   align-items: center;
 }
 
+/* Important Section */
 .important {
   margin-left: 15%;
   margin-top: 15%;
@@ -451,6 +464,7 @@
   gap: 5%;
   overflow-x: auto;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
   flex-wrap: nowrap;
@@ -473,12 +487,12 @@
 }
 
 .card:nth-child(1) {
-  background-image: url("./assets/applepencil.jpg");
+  background-image: url("/assets/applepencil.jpg"); /* Absolute path */
   background-size: cover;
 }
 
 .card:nth-child(2) {
-  background-image: url("./assets/magickeyboard.jpg");
+  background-image: url("/assets/magickeyboard.jpg"); /* Absolute path */
   background-size: cover;
 }
 
@@ -496,6 +510,7 @@
   flex-direction: column-reverse;
 }
 
+/* Why Best Section */
 .why-best {
   text-align: start;
   margin-bottom: 5%;
@@ -529,9 +544,10 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  padding-bottom: 1rem;
 }
 
 .best-container::-webkit-scrollbar {
@@ -554,8 +570,8 @@
 }
 
 .best-card:hover {
-  scale: 1.05;
-  transition: 0.3s;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .best-card::after {
@@ -598,6 +614,7 @@
   line-height: 1.4;
 }
 
+/* Animate Section */
 .container-animate {
   display: flex;
   width: 100%;
@@ -691,6 +708,7 @@
   transform: rotate(180deg);
 }
 
+/* Footer */
 footer {
   width: 100%;
   height: 100%;
@@ -826,6 +844,7 @@ footer {
   text-decoration: underline;
 }
 
+/* Animations */
 @keyframes flashWhite {
   0% {
     opacity: 1;
@@ -871,6 +890,7 @@ img#previewImage {
   border-radius: 12px;
 }
 
+/* Media Queries */
 @media (max-width: 1024px) {
   .sub-hero h1 {
     font-size: 3.5rem;
@@ -935,7 +955,7 @@ img#previewImage {
     flex-direction: column;
     font-weight: bolder;
     transform: translateY(0);
-    transition: 1s;
+    transition: transform 1s; /* Specified transform */
   }
   .nav-list.active li {
     display: block;
@@ -953,7 +973,7 @@ img#previewImage {
     width: 95%;
   }
   .card-content {
-    flex: 0 0 45%;
+    flex: 0 0 90%; /* Adjusted for smaller screens */
     height: 300px;
     min-width: 160px;
   }
@@ -1063,6 +1083,7 @@ img#previewImage {
   }
 }
 
+/* Specific IDs */
 #pencil {
   width: 15px;
 }
@@ -1080,6 +1101,7 @@ img#previewImage {
   font-weight: bold;
   font-size: 1.5em;
 }
+
 #im {
   width: 100%;
 }
