@@ -93,8 +93,8 @@
 /* Sub Hero */
 .sub-hero {
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 2.5%;
   display: flex;
 
@@ -105,9 +105,11 @@
   font-weight: bold;
   font-size: 5rem;
   margin-top: 2%;
+  text-align: left;
 }
 
 .sub-hero-p {
+  margin-left: 12%;
   margin-top: 3%;
   font-size: 1.5em;
   font-weight: bold;
