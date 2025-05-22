@@ -92,9 +92,12 @@
 
 /* Sub Hero */
 .sub-hero {
+  display: flex;
+  flex-direction: column;
+  
   margin-top: 2.5%;
   display: flex;
-  justify-content: space-between;
+
 }
 
 .sub-hero h1 {
@@ -432,6 +435,8 @@
 /* Important Section */
 .important {
   margin-left: 15%;
+  display: flex;
+  flex-direction: column;
   margin-top: 15%;
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -461,14 +466,13 @@
 
 .important-container {
   display: flex;
+  flex-direction: row;
   gap: 5%;
   overflow-x: auto;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;
   scrollbar-width: none;
   flex-wrap: nowrap;
-  width: 90%;
+  width: 100%;
   justify-content: flex-start;
   padding: 0 10px;
 }
