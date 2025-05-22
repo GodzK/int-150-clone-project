@@ -70,19 +70,19 @@
       </div>
     </div>
 
-    <div style="margin-left: 1px;">
-      <div class="sub-hero">
+    <div style="margin-left: 1px; "  >
+      <div class="sub-hero" ">
         <h1>iPad</h1>
         <div class="sub-hero-p">
           <h2>ทั้งแตะ วาด และพิมพ์ได้เลย<br> บนอุปกรณ์สุดมหัศจรรย์เครื่องนี้</h2>
         </div>
       </div>
 
-      <div class="landing-image">
+      <div class="landing-image" >
         <video src="./assets/ipadvideo.mp4" autoplay loop muted></video>
       </div>
 
-      <div class="introducing">
+      <div class="introducing" >
         <h1>ทำความรู้จักกับ iPad</h1>
         <div class="card-container-wrapper">
           <div class="card-container">
@@ -322,24 +322,30 @@
           </div>
         </div>
       </div>
-
-      <div class="important">
+ <div class="important">
         <h1>สิ่งจำเป็นสำหรับ iPad</h1>
         <div class="important-card">
-          <div class="card">
-            <h2>Apple Pencil</h2>
-            <p>ปิ๊งไอเดียปุ๊ป ก็จดลงมาได้ปั๊ป</p>
-            <p><a href="">ดูเพิ่มเติม ></a></p>
-          </div>
-          <div class="card" id="secondcard">
-            <div style="margin-top: 15rem; display: flex; flex-direction: column; width: 100%; height: 230px; line-height: 2.8em;">
-              <h2>คีย์บอร์ดสำหรับiPad</h2>
-              <p>พิมพ์ก็ดี พกก็ง่าย</p>
+          <div class="important-container">
+            <div class="card">
+              <h2>Apple Pencil</h2>
+              <p>ปิ๊งไอเดียปุ๊ป ก็จดลงมาได้ปั๊ป</p>
               <p><a href="">ดูเพิ่มเติม ></a></p>
             </div>
+            <div class="card" id="secondcard">
+              <div style="margin-top: 15rem; display: flex; flex-direction: column; width: 100%; height: 230px; line-height: 2.8em;">
+                <h2>คีย์บอร์ดสำหรับiPad</h2>
+                <p>พิมพ์ก็ดี พกก็ง่าย</p>
+                <p><a href="">ดูเพิ่มเติม ></a></p>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-buttons" id="im">
+            <button class="btn-scroll" onclick="scrollCards('left', '.important-container')">‹</button>
+            <button class="btn-scroll" onclick="scrollCards('right', '.important-container')">›</button>
           </div>
         </div>
       </div>
+
 
       <div class="why-best" style="padding-bottom: 5rem;">
         <h1>ทำไมซื้อ iPad ที่ Apple ถึงดีที่สุด</h1>
@@ -430,46 +436,44 @@
           </div>
         </div>
       </div>
-    <div class="menu-container">
-    <div class="menu-column">
-      <h2>iPad</h2>
-      <ul>
-        <li class="category"> <strong>ดูข้อมูล iPad</strong></li>
-        <li><strong>ดูข้อมูล iPad ทั้งหมด</strong></li>
-        <li><strong>iPad Pro</strong></li>
-        <li><strong>iPad Air</strong></li>
-        <li><strong>iPad</strong></li>
-        <li><strong>iPad mini</strong></li>
-        <li><strong>Apple Pencil</strong></li>
-        <li>คีย์บอร์ด</li>
-        <li>เปรียบเทียบ iPad</li>
-        <li><strong>ทำไมต้อง iPad</strong></li>
-      </ul>
-    </div>
-
-    <div class="menu-column">
-      <ul>
-        <li class="category">เลือกซื้อ iPad</li>
-        <li>เลือกซื้อ iPad</li>
-        <li>อุปกรณ์เสริม iPad</li>
-        <li><strong>Apple Trade In</strong></li>
-        <li>บริการด้านการเงิน</li>
-      </ul>
-    </div>
-
-    <div class="menu-column">
-      <ul>
-        <li class="category">อีกมากมายจาก iPad</li>
-        <li>บริการช่วยเหลือสำหรับ iPad</li>
-        <li>AppleCare+ สำหรับ iPad</li>
-        <li>iPadOS 18</li>
-        <li>Apple Intelligence</li>
-        <li>แอปต่างๆ จาก Apple</li>
-        <li>iCloud+</li>
-        <li>การศึกษา</li>
-      </ul>
-    </div>
-  </div>
+          <div class="menu-container">
+        <div class="menu-column">
+          <h2>iPad</h2>
+          <ul>
+            <li class="category"><strong>ดูข้อมูล iPad</strong></li>
+            <li><strong>ดูข้อมูล iPad ทั้งหมด</strong></li>
+            <li><strong>iPad Pro</strong></li>
+            <li><strong>iPad Air</strong></li>
+            <li><strong>iPad</strong></li>
+            <li><strong>iPad mini</strong></li>
+            <li><strong>Apple Pencil</strong></li>
+            <li>คีย์บอร์ด</li>
+            <li>เปรียบเทียบ iPad</li>
+            <li><strong>ทำไมต้อง iPad</strong></li>
+          </ul>
+        </div>
+        <div class="menu-column">
+          <ul>
+            <li class="category">เลือกซื้อ iPad</li>
+            <li>เลือกซื้อ iPad</li>
+            <li>อุปกรณ์เสริม iPad</li>
+            <li><strong>Apple Trade In</strong></li>
+            <li>บริการด้านการเงิน</li>
+          </ul>
+        </div>
+        <div class="menu-column">
+          <ul>
+            <li class="category">อีกมากมายจาก iPad</li>
+            <li>บริการช่วยเหลือสำหรับ iPad</li>
+            <li>AppleCare+ สำหรับ iPad</li>
+            <li>iPadOS 18</li>
+            <li>Apple Intelligence</li>
+            <li>แอปต่างๆ จาก Apple</li>
+            <li>iCloud+</li>
+            <li>การศึกษา</li>
+          </ul>
+        </div>
+      </div>
 
 
       <footer>
@@ -612,94 +616,127 @@ Apps are available on the App Store. Title availability is subject to change.
     </div>
 
     <script>
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navList = document.querySelector(".nav-list");
-      menuToggle.addEventListener("click", () => {
-        navList.classList.toggle("active");
-        menuToggle.textContent = navList.classList.contains("active") ? "✕" : "☰";
-      });
+    const menuToggle = document.querySelector(".menu-toggle");
+const navList = document.querySelector(".nav-list");
+menuToggle.addEventListener("click", () => {
+  navList.classList.toggle("active");
+  menuToggle.textContent = navList.classList.contains("active") ? "✕" : "☰";
+});
 
-      const dropdowns = document.querySelectorAll(".dropdown");
-      const image = document.getElementById("previewImage");
+const dropdowns = document.querySelectorAll(".dropdown");
+const image = document.getElementById("previewImage");
 
-      dropdowns.forEach((drop) => {
-        const header = drop.querySelector(".dropdown-header");
-        header.addEventListener("click", () => {
-          dropdowns.forEach((d) => {
-            if (d !== drop) {
-              d.classList.remove("open");
-            }
-          });
-          const isOpening = !drop.classList.contains("open");
-          drop.classList.toggle("open");
-          if (isOpening) {
-            const newImg = drop.getAttribute("data-img");
-            image.style.opacity = 0;
-            setTimeout(() => {
-              image.src = newImg;
-              image.style.opacity = 1;
-            }, 400);
-          }
-        });
-      });
-
-      function scrollCards(direction, containerSelector) {
-        if (!containerSelector) {
-          console.error("containerSelector is undefined");
-          return;
-        }
-        const container = document.querySelector(containerSelector);
-        if (!container) {
-          console.error(`No element found for selector: ${containerSelector}`);
-          return;
-        }
-        let cardWidth;
-        if (containerSelector === '.ipad-property-container') {
-          const card = container.querySelector(".ipad-device-property");
-          if (!card) {
-            console.error("No .ipad-device-property found in .ipad-property-container");
-            return;
-          }
-          cardWidth = card.offsetWidth + 32;
-        } else {
-          const card = container.querySelector(".best-card, .card-content");
-          if (!card) {
-            console.error("No .best-card or .card-content found in container");
-            return;
-          }
-          cardWidth = card.offsetWidth + 32;
-        }
-        const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
-        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+dropdowns.forEach((drop) => {
+  const header = drop.querySelector(".dropdown-header");
+  header.addEventListener("click", () => {
+    dropdowns.forEach((d) => {
+      if (d !== drop) {
+        d.classList.remove("open");
       }
+    });
+    const isOpening = !drop.classList.contains("open");
+    drop.classList.toggle("open");
+    if (isOpening) {
+      const newImg = drop.getAttribute("data-img");
+      image.style.opacity = 0;
+      setTimeout(() => {
+        image.src = newImg;
+        image.style.opacity = 1;
+      }, 400);
+    }
+  });
+});
 
-      window.addEventListener("scroll", () => {
-        const video = document.querySelector(".landing-image video");
-        const introducing = document.querySelector(".introducing");
-        const rect = introducing.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+function scrollCards(direction, containerSelector) {
+  if (!containerSelector) {
+    console.error("containerSelector is undefined");
+    return;
+  }
+  const container = document.querySelector(containerSelector);
+  if (!container) {
+    console.error(`No element found for selector: ${containerSelector}`);
+    return;
+  }
+  let cardWidth;
+  if (containerSelector === '.ipad-property-container') {
+    const card = container.querySelector(".ipad-device-property");
+    if (!card) {
+      console.error("No .ipad-device-property found in .ipad-property-container");
+      return;
+    }
+    cardWidth = card.offsetWidth + 32;
+  } else if (containerSelector === '.important-container') {
+    const card = container.querySelector(".card");
+    if (!card) {
+      console.error("No .card found in .important-container");
+      return;
+    }
+    cardWidth = card.offsetWidth + 32;
+  } else {
+    const card = container.querySelector(".best-card, .card-content");
+    if (!card) {
+      console.error("No .best-card or .card-content found in container");
+      return;
+    }
+    cardWidth = card.offsetWidth + 32;
+  }
+  const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
+  container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+}
 
-        if (rect.top <= windowHeight && rect.bottom >= 0) {
-          const scrollFraction = (windowHeight - rect.top) / windowHeight;
-          const scale = 1 - scrollFraction * 0.5;
-          const borderRadius = scrollFraction * 15;
-          video.style.transform = `scale(${scale})`;
-          video.style.borderRadius = `${borderRadius}%`;
+// Position scroll buttons in ipad-list
+const ipadList = document.querySelector(".ipad-list");
+const ipadScrollButtons = ipadList.querySelector(".scroll-buttons");
+if (ipadList && ipadScrollButtons) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          ipadScrollButtons.style.position = "fixed";
+          ipadScrollButtons.style.bottom = "20px";
+          ipadScrollButtons.style.right = "20px";
+        } else {
+          ipadScrollButtons.style.position = "absolute";
+          ipadScrollButtons.style.bottom = "20px";
+          ipadScrollButtons.style.right = "20px";
         }
       });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
+  );
+  observer.observe(ipadList);
+} else {
+  console.error("ipad-list or scroll-buttons not found");
+}
 
-      const sections = document.querySelectorAll(".introducing, .ipad-list, .important, .why-best, .animate-dropdown");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("fade-in");
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      sections.forEach((section) => observer.observe(section));
-    </script>
+// Fade-in animations for sections
+const sections = document.querySelectorAll(".introducing, .ipad-list, .important, .why-best, .animate-dropdown");
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+sections.forEach((section) => fadeObserver.observe(section));
+
+// Video scaling for introducing section
+window.addEventListener("scroll", () => {
+  const video = document.querySelector(".landing-image video");
+  const introducing = document.querySelector(".introducing");
+  const rect = introducing.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if (rect.top <= windowHeight && rect.bottom >= 0) {
+    const scrollFraction = (windowHeight - rect.top) / windowHeight;
+    const scale = 1 - scrollFraction * 0.5;
+    const borderRadius = scrollFraction * 15;
+    video.style.transform = `scale(${scale})`;
+    video.style.borderRadius = `${borderRadius}%`;
+  }
+});  </script>
   </body>
 </html>

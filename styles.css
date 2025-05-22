@@ -7,6 +7,7 @@
   font-family: "Noto Sans Thai", sans-serif;
 }
 
+/* Unchanged styles for nav, list-menu, sub-hero, landing-image, introducing, etc. */
 .nav {
   display: flex;
   font-size: 1rem;
@@ -103,13 +104,11 @@
 
 .sub-hero-p {
   margin-top: 3%;
-  width: 25%;
   font-size: 1.5em;
   font-weight: bold;
 }
 
 .landing-image {
-  margin-top: 5%;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -117,11 +116,13 @@
 
 .landing-image video {
   width: 90%;
-  height: 1000px;
+  height: 800px;
   transition: transform 0.3s ease, border-radius 0.3s ease;
 }
 
 .introducing {
+  display: flex;
+  flex-direction: column;
   margin-top: 10%;
   font-weight: bold;
   margin-left: 10%;
@@ -219,11 +220,13 @@
 .card-content:nth-child(7) {
   background-image: url("./assets/card2.jpg");
 }
+
 .scroll-buttons {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
   margin-top: 1rem;
+  z-index: 10;
 }
 
 .ipad-list {
@@ -231,6 +234,8 @@
   background-color: rgb(240, 240, 240);
   opacity: 0;
   transition: opacity 0.5s ease;
+  position: relative;
+  min-height: 100vh; /* Ensure section is tall enough for fixed buttons */
 }
 
 .ipad-list.fade-in {
@@ -268,6 +273,8 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
   flex-wrap: nowrap;
+  width: 100%;
+  padding: 0 10px;
 }
 
 .ipad-property-container::-webkit-scrollbar {
@@ -415,6 +422,7 @@
   margin-top: 15%;
   opacity: 0;
   transition: opacity 0.5s ease;
+  position: relative;
 }
 
 .important.fade-in {
@@ -432,8 +440,27 @@
 
 .important-card {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.important-container {
+  display: flex;
   gap: 5%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+  width: 90%;
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+
+.important-container::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
@@ -442,18 +469,17 @@
   border-radius: 5%;
   height: 550px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .card:nth-child(1) {
   background-image: url("./assets/applepencil.jpg");
+  background-size: cover;
 }
 
 .card:nth-child(2) {
   background-image: url("./assets/magickeyboard.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0px -250px;
-  background-color: rgb(255, 255, 255);
 }
 
 .card h2 {
@@ -515,7 +541,9 @@
 .best-card {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba
+
+(0, 0, 0, 0.1);
   padding: 1.5rem;
   width: 400px;
   height: 300px;
@@ -665,36 +693,37 @@
   transform: rotate(180deg);
 }
 
-/* Footer */
-footer{
+footer {
   width: 100%;
   height: 100%;
   font-size: 10px;
   display: flex;
   justify-content: center;
-  
-}
-.content-footer{
-  margin-top: 5%;
- 
-width: 40%;
 }
 
+.content-footer {
+  margin-top: 5%;
+  width: 40%;
+}
 
 .menu-container {
   display: flex;
-  padding: 60px;
-  gap: 60px;
-  margin-left: 8%;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  margin-left: 0;
+  justify-content: center;
 }
 
 .menu-column {
-  min-width: 200px;
+  min-width: 160px;
+  flex: 1 1 200px;
+  max-width: 300px;
 }
 
 .menu-column h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
 .menu-column ul {
@@ -704,15 +733,15 @@ width: 40%;
 }
 
 .menu-column li {
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-bottom: 8px;
+  font-size: 14px;
   cursor: pointer;
 }
 
 .menu-column li.category {
-  font-size: 13px;
+  font-size: 12px;
   color: #888;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .menu-column li strong {
@@ -738,6 +767,7 @@ width: 40%;
   margin-top: 4px;
   font-size: 14px;
 }
+
 .apple-footer {
   padding: 40px 60px;
   background-color: #f5f5f7;
@@ -797,6 +827,7 @@ width: 40%;
 .footer-note a:hover {
   text-decoration: underline;
 }
+
 @keyframes flashWhite {
   0% {
     opacity: 1;
@@ -864,10 +895,29 @@ img#previewImage {
   }
 }
 
+@media (max-width: 734px) {
+  .sub-hero {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 768px) {
+  .landing-image {
+    margin-top: 10%;
+  }
+  .introducing {
+    height: 60%;
+  }
+  .scroll-buttons {
+    margin-top: 0.5rem;
+    bottom: 10px;
+    right: 10px;
+  }
+  .landing-image video {
+    height: 300px;
+  }
   .nav-list {
     gap: 0rem;
-    
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
@@ -894,19 +944,12 @@ img#previewImage {
     font-size: 1.5rem;
     margin: 10px 0;
   }
-  .sub-hero {
-    flex-direction: column;
-    align-items: center;
-  }
   .sub-hero h1 {
     font-size: 2.5rem;
-    margin-left: 0;
-    text-align: center;
   }
   .sub-hero-p {
-    width: 80%;
     font-size: 1em;
-    text-align: center;
+    margin-left: 1.5rem;
   }
   .card-container-wrapper {
     width: 95%;
@@ -917,11 +960,11 @@ img#previewImage {
     min-width: 160px;
   }
   .important-card {
-    flex-direction: column;
-    align-items: center;
+    width: 90%;
   }
   .card {
     width: 90%;
+    height: 550px;
   }
   .right {
     display: none;
@@ -949,8 +992,31 @@ img#previewImage {
     margin-left: 1rem;
     margin-right: 1rem;
   }
-  .content-footer{
+  .content-footer {
     width: 100%;
+  }
+  .menu-container {
+    padding: 15px;
+    gap: 15px;
+  }
+  .menu-column {
+    min-width: 140px;
+    flex: 1 1 150px;
+  }
+  .menu-column h2 {
+    font-size: 20px;
+  }
+  .menu-column li {
+    font-size: 13px;
+  }
+  .ipad-list h1 {
+    margin-left: 5%;
+  }
+  .group-ipad-wrapper {
+    width: 95%;
+  }
+  .ipad-property-container {
+    width: 95%;
   }
 }
 
@@ -971,11 +1037,31 @@ img#previewImage {
     flex: 0 0 80%;
     min-width: 140px;
   }
+  .card {
+    width: 95%;
+    height: 550px;
+  }
   .why-best-container {
     width: 100%;
   }
   .best-card {
     width: 300px;
+  }
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .menu-column {
+    min-width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .menu-column h2 {
+    font-size: 18px;
+  }
+  .menu-column li {
+    font-size: 12px;
   }
 }
 
@@ -995,4 +1081,7 @@ img#previewImage {
 .group-header h1 {
   font-weight: bold;
   font-size: 1.5em;
+}
+#im {
+  width: 100%;
 }
